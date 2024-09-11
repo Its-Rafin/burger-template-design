@@ -1,0 +1,428 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(45, 99%, 55%);
+  --first-color-alt: hsl(45, 99%, 48%);
+  --second-color: hsl(22, 100%, 8%);
+  --white-color: hsl(34, 100%, 96%);
+  --title-color: hsl(22, 100%, 8%);
+  --text-color: hsl(22, 24%, 32%);
+  --text-color-light: hsl(23, 16%, 40%);
+  --body-color: hsl(34, 100%, 92%);
+  --body-color-alt: hsl(34, 100%, 88%);
+  --container-color: hsl(34, 100%, 96%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(22, 100%, 8%, .2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(22, 100%, 8%, .2));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Aclonica", sans-serif;
+  --biggest-font-size: 3rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-regular);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+header{
+  width: 80%;
+  margin: 20px auto 50px auto;
+}
+.nav-item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.nav-logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-logo h4{
+  font-size: 16px;
+  font-weight: 600;
+}
+.nav-link ul{
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-link a{
+  position: relative;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.621);
+}
+.nav-link a:hover{
+  color: black;
+  transition: 0.3s;
+}
+.nav-link a::after{
+  content: '';
+  position: absolute;
+  list-style: none;
+  text-decoration: none;
+  height: 3px;
+  width: 20%;
+  background-color: var(--first-color);
+  opacity: 0;
+  transition: all 0.7s;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link a:hover::after{
+  opacity: 2;
+  width: 100%;
+}
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Add shadow header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+/*=============== Delivery ===============*/
+.home-section, .delivery-section{
+  display: flex;
+  width: 80%;
+  margin: 30px auto 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.home-content, .delivery-content{
+  align-items: center;
+}
+.home-title, .delivery-title h1{
+  color: black;
+  font-size: 40px;
+  font-weight: 600px;
+  margin-bottom: 10px;
+}
+.home-description, .delivery-description{
+  font-weight: 400px;
+  margin-bottom: 30px;
+}
+.home-img, .delivery-img{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+
+/*=============== BUTTON ===============*/
+.button{
+  width: 140px;
+  background-color: var(--first-color);
+  text-align: center;
+  border-style: none;
+  border-radius: 40px;
+  display: inline-block;
+  padding: 10px 2px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: all 0.4s;
+}
+.button a{
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.button:hover{
+  /* background-color: hsl(45, 91%, 48%); */
+  background-color: rgb(254, 231, 204);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+} 
+
+
+/*=============== RECIPE ===============*/
+.section-title{
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.recipe-content{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.recipie-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 45px;
+}
+.recipie-item-r{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.recipie-item .item-description h4{
+  margin-bottom: 10px;
+}
+.recipe-img img{
+  width: 100%;
+  height: 600px
+}
+.recipie-item img{
+  width: 80px;
+  height: 80px;
+  background-color: #f9d150;
+  border-radius: 10px;
+  padding: 5px;
+}
+.recipie-item-r img{
+  width: 80px;
+  height: 80px;
+  background-color: #f9d150;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+
+/*=============== POPULAR ===============*/
+.popular-section{
+  background-color: var(--body-color-alt);
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.popular-card-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  margin: 10px auto 10px auto;
+  gap: 80px;
+}
+.popular-card{
+  position: relative;
+  background-color: var(--first-color);
+  width: 244px;
+  height: 288px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+.popular-card:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  border: 2px solid #fff;
+  transform: scale(1.1, 1.1);
+}
+.popular-card:hover > .popular-price{
+  font-size: 30px;
+  transition-delay: 0.3s;
+}
+.popular-card img{
+  position: absolute;
+  width: 200px;
+  height: 180px;
+  top: -15%;
+  left: 23px;
+}
+.popular-card .popular-title{
+  position: absolute;
+  top: 60%;
+  left: 17px;
+}
+.popular-card .popular-price{
+  position: absolute;
+  top: 80%;
+  left: 17px;
+}
+
+/*=============== DELIVERY ===============*/
+
+/* -------DELIVERY SECTION CSS STYLE COMBINE WITH HOME SECTION------- */
+
+/*=============== CONTACT ===============*/
+.contact-section{
+  position: relative;
+  width: 80%;
+  margin: 50px auto 50px auto;
+  background-color: var(--second-color);
+  border-radius: 48px;
+  padding-top: 20px;
+}
+.contact-content{
+  display: flex;
+  justify-content: space-around;
+}
+.contact-title, .contact-info{
+  color: #fff;
+}
+.contact-icon{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.contact-icon a, .social-link a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  background-color: var(--first-color);
+  color: var(--second-color);
+  border-radius: 8px;
+  transition: transform 0.4s;
+}
+.contact-icon a:hover, .social-link a:hover{
+  transform: translateY(-.25rem);
+}
+.contact-title{
+  margin-bottom: 10px;
+}
+.contact-info{
+  margin-bottom: 20px;
+  color: #ffffffb9;
+}
+.contact-img{
+  display: flex;
+}
+.contact-img img{
+  width: 280px;
+}
+
+/*=============== FOOTER ===============*/
+.footer-container{
+  margin-bottom: 30px;
+}
+.footer-link{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-link{
+  display: flex;
+  gap: 10px;
+  margin-left: -50px;
+}
+.footer-copy{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
