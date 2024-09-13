@@ -244,6 +244,9 @@ header{
   justify-content: space-evenly;
   margin-top: 40px;
 }
+.recipe-description{
+  overflow: hidden;
+}
 .recipie-item{
   display: flex;
   align-items: center;
@@ -281,9 +284,6 @@ header{
   border-radius: 10px;
   padding: 5px;
 
-}
-.recipe-description{
-  overflow: hidden;
 }
 
 /*=============== POPULAR ===============*/
