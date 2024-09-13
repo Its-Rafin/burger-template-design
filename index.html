@@ -12,6 +12,8 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
+      <!-- Aos Scroll Animation CSS -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
       <title>Responsive burger website </title>
    </head>
@@ -21,7 +23,7 @@
          <nav class="nav-item">
             <div class="nav-logo">
                <img src="assets/img/favicon.png" alt="">
-               <h4>Burger</h4>
+               <h1>Burger</h1>
                <!-- <a href="#"><img src="assets/img/favicon.png" alt="">Burger</a> -->
             
             </div>
@@ -42,7 +44,7 @@
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home-section" id="home">
-            <div class="home-content">
+            <div class="home-content"  data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
                <div class="home-title">
                   <h1>Love Every <br> Burger</h1>
                </div>
@@ -55,13 +57,14 @@
                   <a href="#">Bite Now</a>
                </div>
             </div>
-            <div class="home-img">
+            <div class="home-img" data-aos="flip-right" data-aos-delay="300" data-aos-duration="1000">
                <img src="assets/img/home-burger.png" alt="">
             </div>
          </section>
 
          <!--==================== RECIPE ====================-->
-         <section class="recipe section" id="recipe">
+         <section class="recipe section" id="recipe" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+         >
             <div class="section-title">
                <h1>Our Secret Recipe</h1>
             </div>
@@ -70,35 +73,35 @@
                   <img src="assets/img/recipe-burger.png" alt="">
                </div>
                <div class="recipe-description">
-                  <div class="recipie-item">
+                  <div class="recipie-item" data-aos="slide-right" data-aos-delay="600" data-aos-duration="9000">
                      <img src="assets/img/recipe-bread.png" alt="">
                      <div class="item-description">
                         <h4>Bread</h4>
                      <p>Fresh bread, baked to <br> perfection.</p>
                      </div>
                   </div>
-                  <div class="recipie-item-r">
+                  <div class="recipie-item-r" data-aos="slide-left" data-aos-duration="9000" data-aos-delay="600">
                      <img src="assets/img/recipe-cheese.png" alt="">
                      <div class="item-description">
                         <h4>Cheese</h4>
                      <p>Cheese for a fantastic <br> and healthy future..</p>
                      </div>
                   </div>
-                  <div class="recipie-item">
+                  <div class="recipie-item" data-aos="slide-right" data-aos-duration="9000" data-aos-delay="600">
                      <img src="assets/img/recipe-meat.png" alt="">
                      <div class="item-description">
                         <h4>Meat</h4>
                      <p>100% pure beef, bigger<br>and meaty.</p>
                      </div>
                   </div>
-                  <div class="recipie-item-r">
+                  <div class="recipie-item-r" data-aos="slide-left" data-aos-duration="9000" data-aos-delay="600">
                      <img src="assets/img/recipe-vegetable.png" alt="">
                      <div class="item-description">
                         <h4>Vegetables</h4>
                      <p>Vegetables full of the <br> essence of nature and <br>organic.</p>
                      </div>
                   </div>
-                  <div class="recipie-item">
+                  <div class="recipie-item" data-aos="slide-right" data-aos-duration="9000" data-aos-delay="600">
                      <img src="assets/img/recipe-sauces.png" alt="">
                      <div class="item-description">
                         <h4>Sauces</h4>
@@ -113,7 +116,7 @@
          </section>
 
          <!--==================== POPULAR ====================-->
-         <section class="popular-section" id="popular">
+         <section class="popular-section" id="popular" data-aos="fade-up" data-aos-duration="1700" data-aos-easing="ease-in-back" data-aos-offset="0">
             <div class="section-title">
                <h1>Most Devoured <br> Burgers</h1>
             </div>
@@ -169,8 +172,8 @@
          </section>
 
          <!--==================== DELIVERY ====================-->
-         <section class="delivery-section" id="delivery">
-               <div class="delivery-content">
+         <section class="delivery-section" id="delivery" >
+               <div class="delivery-content" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
                   <div class="delivery-title">
                      <h1>Fast Delivery</h1>
                   </div>
@@ -184,13 +187,13 @@
                      <a href="#">Contact Now</a>
                   </div>
                </div>
-               <div class="delivery-img">
+               <div class="delivery-img" data-aos="flip-right" data-aos-delay="300" data-aos-duration="1000">
                   <img src="assets/img/delivery-burger.png" alt="">
                </div>
          </section>
 
          <!--==================== CONTACT ====================-->
-         <section class="contact-section" id="contact">
+         <section class="contact-section" id="contact" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="400" data-aos-duration="2000">
             <div class="section-title">
                <h1 style="color: #fff;">Contact Now</h1>
             </div>
@@ -230,7 +233,7 @@
       </main>
 
       <!--==================== FOOTER ====================-->
-      <footer class="footer">
+      <footer class="footer" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
          <div class="section-title">
             <h1>Burger</h1>
          </div>
@@ -257,8 +260,10 @@
       </footer>
 
       <!--========== SCROLL UP ==========-->
-
-
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
       <!--=============== SCROLLREVEAL ===============-->
       <script src=""></script>
 

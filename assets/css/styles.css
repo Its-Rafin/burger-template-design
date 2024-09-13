@@ -282,7 +282,9 @@ header{
   padding: 5px;
 
 }
-
+.recipe-description{
+  overflow: hidden;
+}
 
 /*=============== POPULAR ===============*/
 .popular-section{
@@ -407,6 +409,76 @@ header{
 .footer-copy{
   text-align: center;
   margin-top: 50px;
+}
+
+/* Small Device Responsive */
+@media (max-width : 576px) {
+  /* Nav Responsive */
+  .nav-item {
+    display: flex;
+    /* margin-top: 10px; */
+    margin-bottom: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+header{
+  margin-bottom: 5px;
+}
+/* HOME Responsive */
+.home-section, .delivery-section {
+  display: flex;
+  width: 80%;
+  margin: 5px auto 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+.home-title, .delivery-title h1 {
+  color: black;
+  font-size: 20px;
+  font-weight: 600px;
+  margin-bottom: 3px;
+}
+/* Recipe Responsive */
+.recipe-content{
+  display: flex;
+  flex-direction: column;
+}
+/* Popular Responsive */
+.popular-card-container{
+  display: grid;
+}
+/* Contact Responsive */
+.contact-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.contact-details{
+  align-items: center;
+  text-align: center;
+}
+.contact-icon {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  margin-top: 13px;
+  justify-content: center;
+}
+/* Footer responsive */
+.footer-link {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.social-link {
+  display: flex;
+  gap: 10px;
+  margin-left: 0px;
+}
 }
 
 /*=============== SCROLL BAR ===============*/
